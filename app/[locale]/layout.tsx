@@ -5,7 +5,13 @@ import Header from "../components/Header";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'animate.css';
-
+import '@vidstack/react/player/styles/default/theme.css';
+import '@vidstack/react/player/styles/default/layouts/video.css';
+import WhatsAppChat from "../components/WhatsAppChat";
+import Image from "next/image";
+import bgImg from '../assets/gradientbg.jpg'
+import {NextUIProvider} from "@nextui-org/system";
+import HeaderNavbar from "../components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,10 +27,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-      </body>
+        <body className={inter.className}>
+          <NextUIProvider>
+              <div className="bg">
+                <Image className="h-screen" src={bgImg} alt="Background Image"></Image>
+              </div>
+                {/* <Header /> */}
+                <HeaderNavbar />
+              <div className="container">
+                {children}
+              </div>
+              <WhatsAppChat />
+          </NextUIProvider>
+        </body>
     </html>
   );
 }

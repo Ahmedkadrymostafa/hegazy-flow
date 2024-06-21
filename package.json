@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/navbar": "^2.0.33",
+    "@nextui-org/react": "^2.4.2",
+    "@vidstack/react": "^1.11.23",
     "animate.css": "^4.1.1",
+    "framer-motion": "^11.2.11",
     "i18next": "^23.11.5",
     "i18next-resources-to-backend": "^1.2.1",
     "next": "^14.2.4",
     "next-i18n-router": "^5.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-floating-whatsapp": "^5.0.8",
     "react-i18next": "^14.1.2",
     "swiper": "^11.1.4"
   },
