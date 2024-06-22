@@ -7,8 +7,8 @@ import AnimatedBtn from "./AnimatedBtn";
 
 const VideoIntroduction = () => {
   return (
-    <div className="flex flex-col gap-11 justify-center">
-      <MediaPlayer className="max-w-[70%] max-h-[550px] mx-auto"
+    <div className="flex flex-col gap-11 justify-center mt-20">
+      <MediaPlayer className="max-w-[768px] max-h-[550px] mx-auto"
         src="https://files.vidstack.io/sprite-fight/720p.mp4"
         viewType="video"
         streamType="on-demand"

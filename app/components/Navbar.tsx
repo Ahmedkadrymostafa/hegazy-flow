@@ -12,8 +12,10 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import ToggleTranslation from "./ToggleTranslation";
+import LanguageChanger from './LanguageChanger'
 
-const HeaderNavbar = () => {
+const HeaderNavbar = (props: any) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenuRef: any = useRef('')
 
@@ -28,14 +30,14 @@ const HeaderNavbar = () => {
             height={120}
           ></Image>
         </Link>
-        <p className="font-bold text-inherit">ACME</p>
+        {/* <p className="font-bold text-inherit">ACME</p> */}
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
             <button className="btn-box">
                 <span className="button-box">
                     <Link color="foreground" href="#">
-                        Home
+                        {props.home}
                     </Link>
                 </span>
             </button>
@@ -44,7 +46,7 @@ const HeaderNavbar = () => {
             <button className="btn-box">
                 <span className="button-box">
                     <Link href="#" aria-current="page">
-                        Case Studies
+                        {props.studies}
                     </Link>
                 </span>
             </button>       
@@ -53,18 +55,23 @@ const HeaderNavbar = () => {
             <button className="btn-box">
                 <span className="button-box">
                     <Link color="foreground" href="#">
-                        Contact
+                        {props.contact}
                     </Link>
                 </span>
             </button>
         </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
             <button className="nav-button">
-                <Link href="#">Free Consultation</Link>
+                <Link href="#">{props.consultation}</Link>
             </button>
         </NavbarItem>
+        <NavbarItem>
+            <LanguageChanger />
+        </NavbarItem>
+      
+      </NavbarContent>
+      <NavbarContent justify="end" className="hidden max-md:flex">
+        
         <NavbarMenuToggle onChange={() => {
             toggleMenuRef.current.checked = !isMenuOpen
         }} icon={
@@ -81,6 +88,8 @@ const HeaderNavbar = () => {
         />
         
       </NavbarContent>
+
+
       <NavbarMenu className="gap-9 pt-9">
         
           <NavbarMenuItem className="w-fit mx-auto">
@@ -89,7 +98,7 @@ const HeaderNavbar = () => {
               href="#"
               size="lg"
               >
-              Home
+              {props.home}
             </Link>
           </NavbarMenuItem>
         <NavbarMenuItem className="w-fit mx-auto">
@@ -98,7 +107,7 @@ const HeaderNavbar = () => {
               href="#"
               size="lg"
               >
-              Case Studies
+              {props.studies}
             </Link>
             
         </NavbarMenuItem>
@@ -108,15 +117,18 @@ const HeaderNavbar = () => {
               href="#"
               size="lg"
               >
-              Contact
+              {props.contact}
             </Link>
             
         </NavbarMenuItem>
         <NavbarMenuItem className="w-fit mx-auto">
             <button className="nav-button">
-                    <Link href="#">Free Consultation</Link>
-                </button>
-            </NavbarMenuItem>
+                <Link href="#">{props.consultation}</Link>
+            </button>
+        </NavbarMenuItem>
+        <NavbarMenuItem className="w-fit mx-auto">
+              <LanguageChanger />
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
