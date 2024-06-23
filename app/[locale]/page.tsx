@@ -6,6 +6,8 @@ import VideoIntroduction from "../components/VideoIntroduction";
 import NewsLetterModal from "../components/NewsLetterModal";
 import Services from "../components/Services";
 import InfiniteLogos from "../components/InfiniteLogos";
+import MotionScroller from "../components/MotionScroller";
+import ServicesContent from "../components/ServicesContent";
 
 export default async function Home({ params: { locale }}: {params: { locale: any}}) {
   const nameSpaces = ['home', 'services']
@@ -16,10 +18,12 @@ export default async function Home({ params: { locale }}: {params: { locale: any
         {/* <h1>{t('title')}</h1> */}
         {/* <div className="circle"></div> */}
         <Landing first={t('first')} second={t('second')} third={t('third')} />
-        <InfiniteLogos />
+        <MotionScroller />
         <VideoIntroduction />
         <NewsLetterModal />
         <Services />
+        <ServicesContent />
+        <InfiniteLogos />
     </TranslationsProvider>
   );
 }

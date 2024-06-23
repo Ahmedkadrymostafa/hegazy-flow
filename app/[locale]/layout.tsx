@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'animate.css';
+import "animate.css/animate.compat.css"
 import '@vidstack/react/player/styles/default/theme.css';
 import '@vidstack/react/player/styles/default/layouts/video.css';
 import WhatsAppChat from "../components/WhatsAppChat";
@@ -34,7 +35,7 @@ export default async function RootLayout({
 }>) {
   const nameSpaces = ['header']
   const { t, resources } = await initTranslations(locale, nameSpaces, null, null );
-
+  
   return (
     <html lang={locale} dir={dir(locale)}>
         <body className={inter.className}>

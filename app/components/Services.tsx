@@ -5,43 +5,61 @@ import { useTranslation } from 'react-i18next';
 import { FaFunnelDollar } from 'react-icons/fa';
 import { SiRocket } from 'react-icons/si';
 import MainHeading from './MainHeading';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Services = () => {
     const { t } = useTranslation();
+    // const ref = useRef(null);
+    // const { scrollyProgress }: any = useScroll({
+    //     target: ref,
+    //     offset: ["0 1", "1.33 1"]
+    // })
+    // const scaleProgress = useTransform(scrollyProgress, [0, 1], [0.8, 1])
+    // const opacityProgress = useTransform(scrollyProgress, [0, 1], [0.6, 1])
 
   return (
     <div className='relative my-20'>
         <MainHeading title="Services" />
         
         <div className='flex gap-9 justify-center flex-wrap'>
-            <div className="serviceBox purple">
-                <div className="service-icon">
-                    <MdMarkEmailRead />
+            <ScrollAnimation animateIn="fadeInDown">
+                <div className="serviceBox purple">
+                    <div className="service-icon">
+                        <MdMarkEmailRead />
+                    </div>
+                    <h3 className="title">{t('services:firstservice')}</h3>
+                    <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
-                <h3 className="title">{t('services:firstservice')}</h3>
-                <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
-            </div>
-            <div className="serviceBox green">
-                <div className="service-icon">
-                    <MdEditDocument />
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInRight">
+                <div className="serviceBox green">
+                    <div className="service-icon">
+                        <MdEditDocument />
+                    </div>
+                    <h3 className="title">{t('services:secondservice')}</h3>
+                    <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
-                <h3 className="title">{t('services:secondservice')}</h3>
-                <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
-            </div>
-            <div className="serviceBox blue">
-                <div className="service-icon">
-                    <FaFunnelDollar />
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp">
+                <div className="serviceBox blue">
+                    <div className="service-icon">
+                        <FaFunnelDollar />
+                    </div>
+                    <h3 className="title">{t('services:thirdservice')}</h3>
+                    <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
-                <h3 className="title">{t('services:thirdservice')}</h3>
-                <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
-            </div>
-            <div className="serviceBox">
-                <div className="service-icon">
-                    <SiRocket />
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInLeft">
+                <div className="serviceBox">
+                    <div className="service-icon">
+                        <SiRocket />
+                    </div>
+                    <h3 className="title">{t('services:fourthservice')}</h3>
+                    <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
-                <h3 className="title">{t('services:fourthservice')}</h3>
-                <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
-            </div>
+            </ScrollAnimation>
         </div>
     </div>
   )

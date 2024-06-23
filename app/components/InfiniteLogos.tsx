@@ -1,31 +1,32 @@
 import React from 'react'
+import Image from "next/image";
+import logo1 from '../assets/logo1.png'
+import logo2 from '../assets/logo2.png'
+import logo3 from '../assets/logo3.png'
+import logo4 from '../assets/logo4.png'
+import logo5 from '../assets/logo5.png'
+import logo6 from '../assets/logo6.png'
 
 const InfiniteLogos = () => {
   return (
     <div>
         <div className="slider">
             <div className="slide-track">
-                <div className="slide bg-red-500">1</div>
-                <div className="slide bg-purple-500">2</div>
-                <div className="slide bg-blue-500">3</div>
-                <div className="slide bg-indigo-500">4</div>
-                <div className="slide bg-pink-500">5</div>
-                <div className="slide bg-green-500">6</div>
-                <div className="slide bg-yellow-500">7</div>
-                <div className="slide bg-red-500">8</div>
-                <div className="slide bg-gray-500 text-white">9</div>
-                <div className="slide bg-blue-800">0</div>
+                <div className="slide"><Image src={logo1} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo2} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo3} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo4} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo5} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo6} alt="partner logo" /></div>
+                
                 {/* same 9 slides doubled (duplicate) */}
-                <div className="slide bg-red-500">1</div>
-                <div className="slide bg-purple-500">2</div>
-                <div className="slide bg-blue-500">3</div>
-                <div className="slide bg-indigo-500">4</div>
-                <div className="slide bg-pink-500">5</div>
-                <div className="slide bg-green-500">6</div>
-                <div className="slide bg-yellow-500">7</div>
-                <div className="slide bg-red-500">8</div>
-                <div className="slide bg-gray-500 text-white">9</div>
-                <div className="slide bg-blue-800">0</div>
+                
+                <div className="slide"><Image src={logo1} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo2} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo3} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo4} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo5} alt="partner logo" /></div>
+                <div className="slide"><Image src={logo6} alt="partner logo" /></div>
             </div>
         </div>
     </div>
