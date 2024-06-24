@@ -76,9 +76,9 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export default function MotionScroller() {
   return (
-    <section>
-      <ParallaxText baseVelocity={-5}>Hegazy Flow</ParallaxText>
-      <ParallaxText baseVelocity={5}>Email marketing</ParallaxText>
+    <section className="dir-ltr flex flex-col gap-7">
+      <ParallaxText baseVelocity={-5}>Hegazy Flow, Digital Marketer</ParallaxText>
+      <ParallaxText baseVelocity={5}>Email marketing, Copy Writing</ParallaxText>
     </section>
   );
 }

@@ -8,6 +8,7 @@ import Services from "../components/Services";
 import InfiniteLogos from "../components/InfiniteLogos";
 import MotionScroller from "../components/MotionScroller";
 import ServicesContent from "../components/ServicesContent";
+import Testimonials from "../components/Testimonials";
 
 export default async function Home({ params: { locale }}: {params: { locale: any}}) {
   const nameSpaces = ['home', 'services']
@@ -24,6 +25,7 @@ export default async function Home({ params: { locale }}: {params: { locale: any
         <Services />
         <ServicesContent />
         <InfiniteLogos />
+        <Testimonials />
     </TranslationsProvider>
   );
 }

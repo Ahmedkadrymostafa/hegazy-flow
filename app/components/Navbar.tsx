@@ -20,17 +20,17 @@ const HeaderNavbar = (props: any) => {
     const toggleMenuRef: any = useRef('')
 
   return (
-    <Navbar position="sticky" height="5rem" onMenuOpenChange={setIsMenuOpen} className="border-bottom">
+    <Navbar position="sticky" height="5rem" onMenuOpenChange={setIsMenuOpen} className="border-bottom dark-bg">
       <NavbarBrand>
         <Link href="/">
           <Image
             src={logo}
             alt="hegazy flow logo"
-            width={120}
-            height={120}
+            width={65}
+            height={65}
           ></Image>
         </Link>
-        {/* <p className="font-bold text-inherit">ACME</p> */}
+        <p className="font-bold text-inherit text-white text-2xl ml-2 max-sm:hidden">HEGAZY FLOW</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>

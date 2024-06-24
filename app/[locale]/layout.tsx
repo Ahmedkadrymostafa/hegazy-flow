@@ -16,6 +16,8 @@ import HeaderNavbar from "../components/Navbar";
 import i18nConfig from "@/i18nConfig";
 import { dir } from "i18next";
 import initTranslations from "../i18n";
+import {ScrollShadow} from "@nextui-org/react";
+import Footer from "../components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -46,9 +48,12 @@ export default async function RootLayout({
                 {/* <Header /> */}
                 <HeaderNavbar home={t('home')} studies={t('studies')} contact={t('contact')} consultation={t('consultation')} />
               <div className="container">
-                {children}
+                <ScrollShadow hideScrollBar>
+                  {children}
+                </ScrollShadow>
               </div>
               <WhatsAppChat />
+              <Footer />
           </NextUIProvider>
         </body>
     </html>

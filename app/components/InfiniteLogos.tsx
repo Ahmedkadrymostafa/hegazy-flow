@@ -10,7 +10,7 @@ import logo6 from '../assets/logo6.png'
 const InfiniteLogos = () => {
   return (
     <div>
-        <div className="slider">
+        <div className="slider dir-ltr">
             <div className="slide-track">
                 <div className="slide"><Image src={logo1} alt="partner logo" /></div>
                 <div className="slide"><Image src={logo2} alt="partner logo" /></div>
