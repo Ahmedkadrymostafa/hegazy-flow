@@ -47,11 +47,11 @@ export default async function RootLayout({
               </div>
                 {/* <Header /> */}
                 <HeaderNavbar home={t('home')} studies={t('studies')} contact={t('contact')} consultation={t('consultation')} />
-              <div className="container">
                 <ScrollShadow hideScrollBar>
                   {children}
                 </ScrollShadow>
-              </div>
+              {/* <div className="container">
+              </div> */}
               <WhatsAppChat />
               <Footer />
           </NextUIProvider>

@@ -10,7 +10,7 @@
   --main-color: #00c4cc;
   --second-color: #0D0115;
   --color-primary-white: rgb(240, 240, 240);
-  --navbar-height: 5rem;
+  --navbar-height: 5.5rem;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -31,6 +31,34 @@ body {
 header {
   max-width: 100% !important;
 }
+iframe {
+  position: relative;
+  /* top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%; */
+}
+/* .VJL48qbQzWENTFAh1Knk {
+  display: none !important;
+}
+iframe::-webkit-scrollbar {
+  background: transparent;
+  width: 0px;
+  scrollbar-width: 0;
+} */
+.calendly-inline-widget {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+/* .calendly-inline-widget::-webkit-scrollbar {
+  background: transparent;
+  width: 0px;
+  scrollbar-width: 0;
+} */
 .dir-ltr {
   direction: ltr !important;
 }
@@ -588,8 +616,9 @@ header {
   display: block;
   height: 3px;
   width: 75px;
-  margin-bottom: 5px;
+  position: absolute;
   left: 0;
+  top: -5px;
 }
 .main-heading h1:after {
   background-color: var(--main-color);

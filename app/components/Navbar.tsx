@@ -32,7 +32,7 @@ const HeaderNavbar = (props: any) => {
         </Link>
         <p className="font-bold text-inherit text-white text-2xl ml-2 max-sm:hidden">HEGAZY FLOW</p>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="end">
+      <NavbarContent className="hidden lg:flex gap-4" justify="end">
         <NavbarItem>
             <button className="btn-box">
                 <span className="button-box">
@@ -62,7 +62,7 @@ const HeaderNavbar = (props: any) => {
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
             <button className="nav-button">
-                <Link href="#">{props.consultation}</Link>
+                <Link href="/booking">{props.consultation}</Link>
             </button>
         </NavbarItem>
         <NavbarItem>
@@ -70,7 +70,7 @@ const HeaderNavbar = (props: any) => {
         </NavbarItem>
       
       </NavbarContent>
-      <NavbarContent justify="end" className="hidden max-md:flex">
+      <NavbarContent justify="end" className="hidden max-lg:flex">
         
         <NavbarMenuToggle onChange={() => {
             toggleMenuRef.current.checked = !isMenuOpen
@@ -84,7 +84,7 @@ const HeaderNavbar = (props: any) => {
             </label>
         }
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden"
+        className="lg:hidden"
         />
         
       </NavbarContent>

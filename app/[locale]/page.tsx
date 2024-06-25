@@ -15,17 +15,19 @@ export default async function Home({ params: { locale }}: {params: { locale: any
   const { t, resources } = await initTranslations(locale, nameSpaces, null, null );
 
   return (
-    <TranslationsProvider resources={resources} locale={locale} namespaces={nameSpaces}>
-        {/* <h1>{t('title')}</h1> */}
-        {/* <div className="circle"></div> */}
-        <Landing first={t('first')} second={t('second')} third={t('third')} />
-        <MotionScroller />
-        <VideoIntroduction />
-        <NewsLetterModal />
-        <Services />
-        <ServicesContent />
-        <InfiniteLogos />
-        <Testimonials />
-    </TranslationsProvider>
+    <div className="container">
+      <TranslationsProvider resources={resources} locale={locale} namespaces={nameSpaces}>
+          {/* <h1>{t('title')}</h1> */}
+          {/* <div className="circle"></div> */}
+          <Landing first={t('first')} second={t('second')} third={t('third')} />
+          <MotionScroller />
+          <VideoIntroduction />
+          <NewsLetterModal />
+          <Services />
+          <ServicesContent />
+          <InfiniteLogos />
+          <Testimonials />
+      </TranslationsProvider>
+    </div>
   );
 }

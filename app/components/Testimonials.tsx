@@ -13,7 +13,7 @@ import TestimonialCard from "./TestimonialCard";
 
 const Testimonials = () => {
   return (
-    <div className="my-10">
+    <div className="my-16">
         <MainHeading title="Testimonials" />
       <Swiper
         slidesPerView={3}
