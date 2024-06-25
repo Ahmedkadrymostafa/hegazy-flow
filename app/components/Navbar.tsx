@@ -36,7 +36,7 @@ const HeaderNavbar = (props: any) => {
         <NavbarItem>
             <button className="btn-box">
                 <span className="button-box">
-                    <Link color="foreground" href="#">
+                    <Link color="foreground" href="/">
                         {props.home}
                     </Link>
                 </span>
@@ -95,7 +95,7 @@ const HeaderNavbar = (props: any) => {
           <NavbarMenuItem className="w-fit mx-auto">
             <Link
               className="w-full text-white text-3xl font-bold"
-              href="#"
+              href="/"
               size="lg"
               >
               {props.home}
@@ -123,7 +123,7 @@ const HeaderNavbar = (props: any) => {
         </NavbarMenuItem>
         <NavbarMenuItem className="w-fit mx-auto">
             <button className="nav-button">
-                <Link href="#">{props.consultation}</Link>
+                <Link href="/booking">{props.consultation}</Link>
             </button>
         </NavbarMenuItem>
         <NavbarMenuItem className="w-fit mx-auto">

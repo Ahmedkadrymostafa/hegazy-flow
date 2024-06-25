@@ -19,6 +19,10 @@ import initTranslations from "../i18n";
 import {ScrollShadow} from "@nextui-org/react";
 import Footer from "../components/Footer";
 
+
+// import { motion, AnimatePresence } from 'framer-motion';
+
+
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,7 +36,7 @@ export function generateStaticParams() {
 export default async function RootLayout({
   children, params: { locale }
 }: Readonly<{
-  children: React.ReactNode;
+  children: any;
   params: { locale: any }
 }>) {
   const nameSpaces = ['header']
@@ -47,9 +51,11 @@ export default async function RootLayout({
               </div>
                 {/* <Header /> */}
                 <HeaderNavbar home={t('home')} studies={t('studies')} contact={t('contact')} consultation={t('consultation')} />
+                
                 <ScrollShadow hideScrollBar>
                   {children}
                 </ScrollShadow>
+                
               {/* <div className="container">
               </div> */}
               <WhatsAppChat />
