@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div>
       {/* <MainHeading title="Schedule a free consultation" /> */}
-      <CalendlyEmbed url="https://calendly.com/ahmedkadry730/" />
+      <CalendlyEmbed url="https://calendly.com/ahmedkadry730/30min" />
     </div>
   )
 }

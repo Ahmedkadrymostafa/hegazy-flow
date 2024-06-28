@@ -1,11 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
-import screen from '../assets/wscreen.jpg'
-const TestimonialCard = () => {
+// import screen from '../assets/wscreen.jpg'
+import { Testi } from '@/types/Testi'
+
+const TestimonialCard = (props: Testi) => {
   return (
     
         <div className="card">
-            <Image width={280} height={350} src={screen} alt="client review image" />
+            <Image width={280} height={350} src={props.image} alt="client review image" />
             <div className="card-content">
             {/* <h2>
                 Card Heading

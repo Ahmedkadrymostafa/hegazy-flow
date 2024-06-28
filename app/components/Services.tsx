@@ -29,7 +29,7 @@ const Services = () => {
                     <div className="service-icon">
                         <MdMarkEmailRead />
                     </div>
-                    <h3 className="title">{t('services:firstservice')}</h3>
+                    <h3 className="title">{t('services:first')}</h3>
                     <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
             </ScrollAnimation>
@@ -38,7 +38,7 @@ const Services = () => {
                     <div className="service-icon">
                         <MdEditDocument />
                     </div>
-                    <h3 className="title">{t('services:secondservice')}</h3>
+                    <h3 className="title">{t('services:second')}</h3>
                     <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
             </ScrollAnimation>
@@ -47,7 +47,7 @@ const Services = () => {
                     <div className="service-icon">
                         <FaFunnelDollar />
                     </div>
-                    <h3 className="title">{t('services:thirdservice')}</h3>
+                    <h3 className="title">{t('services:third')}</h3>
                     <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
             </ScrollAnimation>
@@ -56,7 +56,7 @@ const Services = () => {
                     <div className="service-icon">
                         <SiRocket />
                     </div>
-                    <h3 className="title">{t('services:fourthservice')}</h3>
+                    <h3 className="title">{t('services:fourth')}</h3>
                     <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
             </ScrollAnimation>

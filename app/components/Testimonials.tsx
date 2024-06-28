@@ -10,8 +10,11 @@ import { Pagination, Navigation } from "swiper/modules";
 import { Card, CardFooter, Image, Button } from "@nextui-org/react";
 import MainHeading from "./MainHeading";
 import TestimonialCard from "./TestimonialCard";
+import { getTestimonials } from "@/sanity/schemas/sanity-utils";
 
-const Testimonials = () => {
+const Testimonials = async () => {
+  const testimonials = await getTestimonials();
+
   return (
     <div className="my-16">
         <MainHeading title="Testimonials" />
@@ -40,7 +43,12 @@ const Testimonials = () => {
           }
         }}
       >
-        <SwiperSlide>
+        {testimonials.map((t) => (
+          <SwiperSlide key={t._id}>
+            <TestimonialCard image={t.image} />
+          </SwiperSlide>
+        ))}
+        {/* <SwiperSlide>
           <TestimonialCard />
         </SwiperSlide>
         <SwiperSlide>
@@ -48,10 +56,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide>
           <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
+        </SwiperSlide> */}
        
         
       </Swiper>

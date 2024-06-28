@@ -18,8 +18,7 @@ import { dir } from "i18next";
 import initTranslations from "../i18n";
 import {ScrollShadow} from "@nextui-org/react";
 import Footer from "../components/Footer";
-
-
+import Head from "next/head";
 // import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -44,22 +43,28 @@ export default async function RootLayout({
   
   return (
     <html lang={locale} dir={dir(locale)}>
-        <body className={inter.className}>
+
+        {/* <Head>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet" />
+        </Head> */}
+
+        <body>
           <NextUIProvider>
               <div className="bg">
                 <Image className="h-screen" src={bgImg} alt="Background Image"></Image>
               </div>
-                {/* <Header /> */}
+                               
                 <HeaderNavbar home={t('home')} studies={t('studies')} contact={t('contact')} consultation={t('consultation')} />
-                
-                <ScrollShadow hideScrollBar>
-                  {children}
-                </ScrollShadow>
-                
-              {/* <div className="container">
-              </div> */}
-              <WhatsAppChat />
-              <Footer />
+                  
+                  <div className="min-h-screen">
+                    {children}
+                  </div>
+                  
+                  <WhatsAppChat />
+                  <Footer />
+                               
           </NextUIProvider>
         </body>
     </html>

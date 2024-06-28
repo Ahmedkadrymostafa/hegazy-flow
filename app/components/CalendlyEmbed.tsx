@@ -14,39 +14,6 @@ const CalendlyEmbed = (props: any) => {
         head?.appendChild(script);
 
 
-
-        // const hideElementInIframe = () => {
-        //   const iframe: any = iframeRef.current;
-        //   // const iframeDocument = iframe.contentWindow.document;
-        //   // const iframeDocumentt = iframe.contentDocument;
-        //   // console.log(iframeDocument)
-        //   // console.log(iframeDocumentt)
-        //   if (iframe && iframe.contentWindow) {
-        //     const iframeDocument = iframe.contentWindow.document;
-            
-            
-        //     // Ensure the iframe content is loaded
-        //     if (iframeDocument.readyState === 'complete') {
-        //       const elementToHide = iframeDocument.querySelector('VJL48qbQzWENTFAh1Knk'); // Change the selector as needed
-        //       if (elementToHide) {
-        //         elementToHide.style.display = 'none';
-        //       }
-        //     }
-        //   }
-        // };
-    
-        // // Attach an event listener to run the function after the iframe content is loaded
-        // const iframe: any = iframeRef.current;
-        // if (iframe) {
-        //   iframe.addEventListener('load', hideElementInIframe);
-        // }
-    
-        // // Cleanup the event listener when the component unmounts
-        // return () => {
-        //   if (iframe) {
-        //     iframe.removeEventListener('load', hideElementInIframe);
-        //   }
-        // };
       }, []);
     
       return (

@@ -20,7 +20,7 @@ const HeaderNavbar = (props: any) => {
     const toggleMenuRef: any = useRef('')
 
   return (
-    <Navbar position="sticky" height="5rem" onMenuOpenChange={setIsMenuOpen} className="border-bottom dark-bg">
+    <Navbar position="sticky" height="5rem" onMenuOpenChange={setIsMenuOpen} className="dir-ltr border-bottom dark-bg">
       <NavbarBrand>
         <Link href="/">
           <Image
@@ -34,40 +34,42 @@ const HeaderNavbar = (props: any) => {
       </NavbarBrand>
       <NavbarContent className="hidden lg:flex gap-4" justify="end">
         <NavbarItem>
-            <button className="btn-box">
-                <span className="button-box">
-                    <Link color="foreground" href="/">
-                        {props.home}
-                    </Link>
-                </span>
-            </button>
+                <Link color="foreground" href="/ar">
+                  <button className="btn-box">
+                      <span className="button-box">
+                              {props.home}
+                      </span>
+                  </button>
+                </Link>
         </NavbarItem>
         <NavbarItem isActive>
-            <button className="btn-box">
-                <span className="button-box">
-                    <Link href="#" aria-current="page">
-                        {props.studies}
-                    </Link>
-                </span>
-            </button>       
+                  <Link href="/ar/case-studies" aria-current="page">
+                    <button className="btn-box">
+                        <span className="button-box">
+                                {props.studies}
+                        </span>
+                    </button>       
+                  </Link>
         </NavbarItem>
         <NavbarItem>
-            <button className="btn-box">
-                <span className="button-box">
-                    <Link color="foreground" href="#">
-                        {props.contact}
+                    <Link color="foreground" href="/ar/contact">
+                      <button className="btn-box">
+                          <span className="button-box">
+                                  {props.contact}
+                          </span>
+                      </button>
                     </Link>
-                </span>
-            </button>
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
-            <button className="nav-button">
-                <Link href="/booking">{props.consultation}</Link>
-            </button>
+                <Link href="/ar/booking">
+                  <button className="nav-button">
+                      {props.consultation}
+                  </button>
+                </Link>
         </NavbarItem>
-        <NavbarItem>
+        {/* <NavbarItem>
             <LanguageChanger />
-        </NavbarItem>
+        </NavbarItem> */}
       
       </NavbarContent>
       <NavbarContent justify="end" className="hidden max-lg:flex">
@@ -104,7 +106,7 @@ const HeaderNavbar = (props: any) => {
         <NavbarMenuItem className="w-fit mx-auto">
             <Link
               className="w-full text-white text-3xl font-bold"
-              href="#"
+              href="/case-studies"
               size="lg"
               >
               {props.studies}
@@ -114,7 +116,7 @@ const HeaderNavbar = (props: any) => {
         <NavbarMenuItem className="w-fit mx-auto">
             <Link
               className="w-full text-white text-3xl font-bold"
-              href="#"
+              href="/contact"
               size="lg"
               >
               {props.contact}
@@ -122,13 +124,15 @@ const HeaderNavbar = (props: any) => {
             
         </NavbarMenuItem>
         <NavbarMenuItem className="w-fit mx-auto">
-            <button className="nav-button">
-                <Link href="/booking">{props.consultation}</Link>
-            </button>
+                <Link href="/booking">
+                  <button className="nav-button">
+                      {props.consultation}
+                  </button>
+                </Link>
         </NavbarMenuItem>
-        <NavbarMenuItem className="w-fit mx-auto">
+        {/* <NavbarMenuItem className="w-fit mx-auto">
               <LanguageChanger />
-        </NavbarMenuItem>
+        </NavbarMenuItem> */}
       </NavbarMenu>
     </Navbar>
   );
