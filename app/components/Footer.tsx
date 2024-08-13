@@ -6,7 +6,7 @@ import { FaSquareInstagram } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
-    <footer className='relative px-20 py-12 dark-bg max-md:px-7'>
+    <footer className='relative px-20 dark-g-bg blue-shadow mt-24 py-12 max-md:px-7'>
         <div className='flex flex-col gap-6'>
             {/* <div className='flex gap-2 items-center'>
                 <Image src={logo} width={130} alt='hegazy flow logo' />

@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from "next/image";
-import logo1 from '../assets/logo1.png'
-import logo2 from '../assets/logo2.png'
-import logo3 from '../assets/logo3.png'
-import logo4 from '../assets/logo4.png'
-import logo5 from '../assets/logo5.png'
-import logo6 from '../assets/logo6.png'
+import logo1 from '../assets/b one.png'
+import logo2 from '../assets/b two.png'
+import logo3 from '../assets/b three.png'
+import logo4 from '../assets/b four.png'
+import logo5 from '../assets/b five.png'
+import logo6 from '../assets/b six.png'
 
 const InfiniteLogos = () => {
   return (

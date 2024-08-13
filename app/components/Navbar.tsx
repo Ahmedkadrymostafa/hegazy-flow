@@ -20,8 +20,8 @@ const HeaderNavbar = (props: any) => {
     const toggleMenuRef: any = useRef('')
 
   return (
-    <Navbar position="sticky" height="5rem" onMenuOpenChange={setIsMenuOpen} className="dir-ltr border-bottom dark-bg">
-      <NavbarBrand>
+    <Navbar position="sticky" height="5rem" onMenuOpenChange={setIsMenuOpen} className="dir-ltr">
+      <NavbarBrand className="justify-center">
         <Link href="/">
           <Image
             src={logo}
@@ -32,7 +32,7 @@ const HeaderNavbar = (props: any) => {
         </Link>
         <p className="font-bold text-inherit text-white text-2xl ml-2 max-sm:hidden">HEGAZY FLOW</p>
       </NavbarBrand>
-      <NavbarContent className="hidden lg:flex gap-4" justify="end">
+      {/* <NavbarContent className="hidden lg:flex gap-4" justify="end">
         <NavbarItem>
                 <Link color="foreground" href="/ar">
                   <button className="btn-box">
@@ -67,12 +67,12 @@ const HeaderNavbar = (props: any) => {
                   </button>
                 </Link>
         </NavbarItem>
-        {/* <NavbarItem>
+        <NavbarItem>
             <LanguageChanger />
-        </NavbarItem> */}
+        </NavbarItem>
       
-      </NavbarContent>
-      <NavbarContent justify="end" className="hidden max-lg:flex">
+      </NavbarContent> */}
+      {/* <NavbarContent justify="end" className="hidden max-lg:flex">
         
         <NavbarMenuToggle onChange={() => {
             toggleMenuRef.current.checked = !isMenuOpen
@@ -89,10 +89,10 @@ const HeaderNavbar = (props: any) => {
         className="lg:hidden"
         />
         
-      </NavbarContent>
+      </NavbarContent> */}
 
 
-      <NavbarMenu className="gap-9 pt-9">
+      {/* <NavbarMenu className="gap-9 pt-9 overflow-hidden">
         
           <NavbarMenuItem className="w-fit mx-auto">
             <Link
@@ -130,10 +130,11 @@ const HeaderNavbar = (props: any) => {
                   </button>
                 </Link>
         </NavbarMenuItem>
-        {/* <NavbarMenuItem className="w-fit mx-auto">
+        <NavbarMenuItem className="w-fit mx-auto">
               <LanguageChanger />
-        </NavbarMenuItem> */}
-      </NavbarMenu>
+        </NavbarMenuItem>
+      </NavbarMenu> */}
+
     </Navbar>
   );
 };

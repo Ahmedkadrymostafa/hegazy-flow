@@ -21,7 +21,7 @@
     "framer-motion": "^11.2.11",
     "i18next": "^23.11.5",
     "i18next-resources-to-backend": "^1.2.1",
-    "next": "^14.2.4",
+    "next": "^14.2.5",
     "next-i18n-router": "^5.5.0",
     "next-sanity": "^9.4.2",
     "react": "^18.3.1",

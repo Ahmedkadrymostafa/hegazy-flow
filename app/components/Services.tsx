@@ -33,7 +33,7 @@ const Services = () => {
                     <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInRight">
+            <ScrollAnimation animateIn="fadeInDown">
                 <div className="serviceBox green">
                     <div className="service-icon">
                         <MdEditDocument />
@@ -51,7 +51,7 @@ const Services = () => {
                     <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                 </div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInLeft">
+            <ScrollAnimation animateIn="fadeInDown">
                 <div className="serviceBox">
                     <div className="service-icon">
                         <SiRocket />

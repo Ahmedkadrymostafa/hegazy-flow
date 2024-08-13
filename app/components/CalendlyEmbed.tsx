@@ -22,7 +22,9 @@ const CalendlyEmbed = (props: any) => {
         //   data-url={props.url}
         //   style={{ minHeight: "650px", width: "100%", height: "100%" }}
         // ></div>
-        <iframe ref={iframeRef} src={props.url}></iframe>
+        <div>
+          <iframe ref={iframeRef} src={props.url}></iframe>
+        </div>
   )
 }
 
