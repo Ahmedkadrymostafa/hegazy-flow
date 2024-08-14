@@ -7,7 +7,7 @@ const Testimonials = async () => {
  
 
   return (
-    <div className="my-16 container">
+    <div className="my-28 container">
         <MainHeading title="Testimonials" />
       <TestimonialsContainer  />
       {/* <TestimonialsContainer testimonials={testimonials} /> */}
