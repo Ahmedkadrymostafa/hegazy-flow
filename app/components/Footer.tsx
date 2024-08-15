@@ -4,11 +4,13 @@ import Image from 'next/image'
 import { FaFacebookSquare, FaLinkedin, FaPhone, FaTiktok } from 'react-icons/fa'
 import { FaSquareInstagram } from 'react-icons/fa6'
 import { MdOutlineMail } from 'react-icons/md'
+import { IoLocationSharp } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <footer className='relative px-20 dark-g-bg blue-shadow mt-24 py-12 max-md:px-7'>
-        <div className='flex flex-col gap-6 max-sm:text-center'>
+    <footer className='relative px-20 dark-g-bg mt-24 py-12 max-md:px-7'>
+        <div className='thin-bar'></div>
+        <div className='flex flex-col pt-12 gap-6 max-sm:text-center'>
             {/* <div className='flex gap-2 items-center'>
                 <Image src={logo} width={130} alt='hegazy flow logo' />
                 <p className='text-white text-xl font-bold'>HEGAZY FLOW</p>
@@ -25,16 +27,25 @@ const Footer = () => {
                         <li className='text-base text-gray-400'><Link href='/'>Contact</Link></li>
                     </ul>
                 </div> */}
-                <div className='flex justify-between gap-10 max-sm:flex-col'>
+                <div className='flex justify-between items-center gap-10 max-sm:flex-col'>
                     <div>
                         <h3 className='text-white text-2xl mb-2'>Contact</h3>
-                        <div className='text-gray-400 text-lg p-3 flex gap-2 items-center w-fit max-sm:mx-auto'>
+                        <div className='text-gray-400 text-lg p-3 flex gap-2 items-center w-fit max-sm:mx-auto max-sm:flex-col'>
                             <MdOutlineMail className='text-xl' />
-                            <p >info@gmail.com</p>
+                            <p>info@hegazyflows.com</p>
                         </div>
-                        <div className='text-gray-400 text-lg p-3 flex gap-2 items-center w-fit max-sm:mx-auto'>
+                        <div className='text-gray-400 text-lg p-3 flex gap-2 items-center w-fit max-sm:mx-auto max-sm:flex-col'>
                             <FaPhone className='text-xl' />
-                            <p >+456 78942345</p>
+                            <p>+44 7365 604533</p>
+                        </div>
+                        <div className='text-gray-400 text-lg p-3 flex gap-2 w-fit max-sm:mx-auto max-sm:flex-col max-sm:items-center'>
+                            <IoLocationSharp className='text-xl' />
+                            <p>
+                                71-75 Shelton Street <br />
+                                Covent Garden <br />
+                                London <br />
+                                UNITED KINGDOM
+                            </p>
                         </div>
                     </div>
                     <div>
@@ -58,7 +69,7 @@ const Footer = () => {
                     <li className='text-3xl text-gray-400'><Link href='/'><FaSquareInstagram /></Link></li>
                     <li className='text-3xl text-gray-400'><Link href='/'><FaTiktok /></Link></li>
                 </ul>
-                <p className='text-gray-400 mx-auto'>Copyright &copy; 2024 | All Rights Reserved</p>
+                <p className='text-gray-400 mx-auto max-sm:flex-col'>Copyright &copy; 2024 | All Rights Reserved</p>
             </div>
         </div>
     </footer>

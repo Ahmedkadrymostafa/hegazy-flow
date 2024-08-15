@@ -4,9 +4,9 @@ const AnimatedBtn = () => {
   return (
     <div>
       <button className="btn relative">
-        <i className="animation"></i>
+        {/* <i className="animation"></i> */}
         Schedule a call
-        <i className="animation"></i>
+        {/* <i className="animation"></i> */}
       </button>
     </div>
   );

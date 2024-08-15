@@ -8,7 +8,7 @@ const Testimonials = async () => {
 
   return (
     <div className="my-28 container">
-        <MainHeading title="Testimonials" />
+        <MainHeading smallHeading="What Our" largeHeading="Clients Says" />
       <TestimonialsContainer  />
       {/* <TestimonialsContainer testimonials={testimonials} /> */}
     </div>

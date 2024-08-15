@@ -4,7 +4,7 @@ import ContactForm from './ContactForm'
 const ContactUs = () => {
   return (
     <div className='relative flex justify-center my-16'>
-        <div className="glass blue-shadow p-8 flex justify-between gap-3 w-[80%] max-md:p-1 max-md:w-[90%] max-md:flex-col">
+        <div className="g-bg rounded-3xl blue-shadow p-8 flex justify-between gap-3 w-[80%] max-md:p-1 max-md:w-[90%] max-md:flex-col">
             <div className='p-8 w-[60%] max-md:w-auto max-md:p-4'>
                 <h1 className='text-white text-2xl font-black mb-6'>get in touch</h1>
                 <p className='text-lg text-white font-semibold'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non itaque veritatis, nam soluta fugiat mollitia unde? Corporis deserunt distinctio, molestiae ab repellendus natus, quaerat, sed dicta molestias culpa dignissimos reiciendis!</p>

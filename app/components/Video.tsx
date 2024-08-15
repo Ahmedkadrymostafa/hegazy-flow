@@ -3,20 +3,29 @@ import {
   defaultLayoutIcons,
   DefaultVideoLayout,
 } from "@vidstack/react/player/layouts/default";
-import AnimatedBtn from "./AnimatedBtn";
 
-const VideoIntroduction = () => {
+type Video = {
+    src: string,
+    poster: string,
+    thumbnail: string,
+    width: number,
+    height: number
+}
+
+const Video = ($: Video) => {
+    // const dynamicClassName = `max-w-[${$.width}px] max-h-[${$.height}px] mx-auto`;
+    // const dynamicClassName = `max-w-[${$.width}px] max-h-[${$.height}px] mx-auto`;
   return (
-    <div className="flex flex-col gap-11 justify-center mt-10">
-      <MediaPlayer className="max-w-[768px] max-h-[550px] mx-auto"
-        src="https://files.vidstack.io/sprite-fight/720p.mp4"
+    <div className="max-w-[850px] mx-auto">
+        <MediaPlayer className="w-full h-full"
+        src={$.src}
         viewType="video"
         streamType="on-demand"
         logLevel="warn"
         crossOrigin
         playsInline
         title="Sprite Fight"
-        poster="https://files.vidstack.io/sprite-fight/poster.webp"
+        poster={$.poster}
       >
         <MediaProvider>
           <Poster className="vds-poster" />
@@ -25,16 +34,12 @@ const VideoIntroduction = () => {
           ))} */}
         </MediaProvider>
         <DefaultVideoLayout
-          thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
+          thumbnails={$.thumbnail}
           icons={defaultLayoutIcons}
         />
       </MediaPlayer>
-
-      <div className="mx-auto">
-        <AnimatedBtn />
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default VideoIntroduction;
+export default Video

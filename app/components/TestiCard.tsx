@@ -12,12 +12,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, jobTitle, conte
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm mx-auto">
       <div className="flex items-center mb-4">
-        <div className="mr-4">
+        <div className="mr-4 mx-auto">
           <h3 className="text-xl font-semibold">{name}</h3>
           <p className="g-text">{jobTitle}</p>
         </div>
       </div>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 w-fit mx-auto">
         {Array.from({ length: 5 }, (_, index) => (
           <FaStar key={index} className={`h-5 w-5 ${index < rating ? 'text-yellow-500' : 'text-gray-300'}`} />
         ))}
