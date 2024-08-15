@@ -6,7 +6,7 @@ import MainHeading from './MainHeading'
 const ServicesContent = () => {
   return (
     <div className='relative px-7 py-10 border-2 border-gray-400 max-sm:px-2'>
-        <MainHeading title="What We Offer" />
+        {/* <MainHeading title="What We Offer" /> */}
 
         <div className='flex justify-between gap-10 items-center max-md:flex-col'>
             <Image src={img} alt='service image' className='rounded-lg max-md:w-[75%] max-sm:w-full' width={300} height={300} />

@@ -21,7 +21,7 @@ const Services = () => {
 
   return (
     <div className='relative my-20'>
-        <MainHeading title="Services" />
+        {/* <MainHeading title="Services" /> */}
         
         <div className='flex gap-9 justify-center flex-wrap'>
             <ScrollAnimation animateIn="fadeInDown">
